@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi"> <!-- Ngôn ngữ trang là tiếng Việt, bạn có thể đổi thành "en" nếu muốn tiếng Anh -->
+<head>
+    <meta charset="UTF-8"> <!-- Đảm bảo hiển thị ký tự Unicode đúng (tiếng Việt) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Làm trang responsive trên mobile -->
+    <title>Thanh Nguyen Thai - Contact Me</title> <!-- Tiêu đề trang hiển thị trên tab browser -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Link CDN cho icons Font Awesome (miễn phí, không cần tải) -->
+    <style> <!-- Phần CSS định kiểu, đặt trong head để đơn giản. Nếu muốn tách, xem phần 2.4 -->
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Font chữ cơ bản, bạn có thể đổi thành 'Roboto' nếu thích */
+            background: linear-gradient(to bottom, #121212, #1e1e1e); /* Nền gradient tối (dark theme) */
+            color: #fff; /* Màu chữ trắng */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Trang full màn hình */
+        }
+        .container {
+            max-width: 800px; /* Độ rộng tối đa, để trang không quá rộng trên desktop */
+            padding: 20px;
+            text-align: center; /* Căn giữa nội dung */
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Làm ảnh tròn */
+            margin-bottom: 20px;
+            border: 3px solid #00bfff; /* Viền xanh dương (accent color), bạn có thể đổi màu hex như #ff0000 cho đỏ */
+        }
+        h1 {
+            font-size: 2em; /* Kích thước chữ lớn cho tên */
+            margin: 10px 0;
+        }
+        p.bio {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #ccc; /* Màu xám nhạt cho bio */
+        }
+        .grid {
+            display: grid; /* Layout lưới, khác biệt so với list dọc của mẫu gốc */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động điều chỉnh cột dựa trên màn hình (1-4 cột) */
+            gap: 20px; /* Khoảng cách giữa cards */
+        }
+        .card {
+            background: #2c2c2c; /* Nền card tối */
+            padding: 20px;
+            border-radius: 10px; /* Bo góc */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Bóng đổ cho chiều sâu */
+            transition: transform 0.3s ease; /* Chuẩn bị animation */
+        }
+        .card:hover {
+            transform: scale(1.05); /* Phóng to khi hover, tạo hiệu ứng khác biệt */
+        }
+        .card a {
+            color: #00bfff; /* Màu link xanh dương */
+            text-decoration: none; /* Bỏ gạch chân link */
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Căn giữa icon và text */
+        }
+        .card i {
+            margin-right: 10px; /* Khoảng cách icon và text */
+            font-size: 1.5em; /* Kích thước icon lớn hơn */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container chính chứa toàn bộ nội dung -->
+        <!-- Ảnh profile: Thay bằng link ảnh thật của bạn -->
+        <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile-img"> <!-- Placeholder tạm, xem phần 2.3 để thay -->
+        <h1>Thanh Nguyen Thai</h1> <!-- Tên của bạn, chỉnh sửa tùy ý -->
+        <p class="bio">Developer & Designer | Kết nối với tôi qua các kênh dưới đây.</p> <!-- Bio ngắn, xóa nếu không cần -->
+        
+        <div class="grid"> <!-- Phần lưới chứa cards -->
+            <!-- Category: Contact -->
+            <div class="card">
+                <a href="tel:+48795113094"><i class="fas fa-phone"></i> Call me: +48 795 113 094</a> <!-- Link gọi điện trực tiếp -->
+            </div>
+            <div class="card">
+                <a href="https://wa.me/48578208844"><i class="fab fa-whatsapp"></i> WhatsApp: +48 578 208 844</a> <!-- Link mở WhatsApp -->
+            </div>
+            <div class="card">
+                <a href="https://t.me/+48795113094"><i class="fab fa-telegram"></i> Telegram: +48 795 113 094</a> <!-- Link Telegram -->
+            </div>
+            <div class="card">
+                <a href="mailto:thanhnguyenthai01@gmail.com"><i class="fas fa-envelope"></i> Email</a> <!-- Link gửi email -->
+            </div>
+            
+            <!-- Category: Social -->
+            <div class="card">
+                <a href="https://www.facebook.com/WinKeyT.20/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> <!-- Mở tab mới với target="_blank" -->
+            </div>
+            <div class="card">
+                <a href="https://www.instagram.com/winkeytt/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            
+            <!-- Category: Projects -->
+            <div class="card">
+                <a href="https://d-studio.page/" target="_blank"><i class="fas fa-globe"></i> Website Project</a>
+            </div>
+            <div class="card">
+                <a href="https://thanhnguyenthai.github.io/" target="_blank"><i class="fas fa-briefcase"></i> Portfolio</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
